@@ -13,7 +13,7 @@ all:
 	mkdir -p $(LIBPATH)
 	cp Rmath/$(LIBNAME) $(DYNLIB)
 	cp Rmath/$(STATIC_LIBNAME) $(STALIB)
-	gcc -I$(JAVA_HOME)"/include/" -I$(JAVA_HOME)"/include/linux/"  -o $(FINALLIB) -shared JNIRMath.c  $(STALIB) -fPIC
+	gcc -I$(JAVA_HOME)"/include/" -I$(JAVA_HOME)"/include/linux/"  -o $(FINALLIB) -shared JNIRMathNative.c  $(STALIB) -fPIC
 	rm -f $(LIBPATH)/*
 	mv $(FINALLIB) $(LIBPATH)
 

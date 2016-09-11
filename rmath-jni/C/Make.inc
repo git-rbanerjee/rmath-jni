@@ -10,7 +10,7 @@ ifeq ($(OS), Windows_NT)
     PREFIX_OS = win32-
 
     ifeq ($(PROCESSOR_ARCHITECTURE), AMD64)
-        PREFIX_ARCH = x86-64
+        PREFIX_ARCH = x86_64
         CC += -m64
     endif
 
@@ -24,7 +24,7 @@ else
     UNAME_P := $(shell uname -p)
 
     ifeq ($(UNAME_P), x86_64)
-        PREFIX_ARCH = x86-64
+        PREFIX_ARCH = x86_64
     endif
 
     ifneq ($(filter %86, $(UNAME_P)),)

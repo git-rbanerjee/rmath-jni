@@ -1,6 +1,10 @@
 
 package org.rmath;
-
+/**
+ * 
+ * @author Rabin Banerjee
+ *
+ */
 public class RMathError
         extends Error
 {

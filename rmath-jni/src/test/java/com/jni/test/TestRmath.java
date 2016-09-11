@@ -1,9 +1,15 @@
 package com.jni.test;
 
 import org.junit.Assert;
+
 import org.junit.Test;
 import org.rmath.RMath;
 import static org.hamcrest.CoreMatchers.*;
+/**
+ * 
+ * @author Rabin Banerjee
+ *
+ */
 public class TestRmath {
 	
 	@Test

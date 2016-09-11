@@ -25,7 +25,7 @@ public class SparkMain {
 	{
 		SparkConf sc = new SparkConf().setAppName("Testing Rmath");
 		
-		
+
 		JavaSparkContext jsc = new JavaSparkContext(sc);
 		
 		

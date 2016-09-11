@@ -1,11 +1,11 @@
-include C/Make.inc
+include native/Make.inc
 
 all:
-	cd C && make
-	yes | cp -rf C/$(LIBPATH) src/main/resources/
+	cd native && make
+	yes | cp -rf native/$(LIBPATH) src/main/resources/native/
 
 
 clean:
-	cd C && make clean
+	cd native && make clean
 
 

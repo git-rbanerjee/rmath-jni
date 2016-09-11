@@ -215,7 +215,7 @@ public class RMathLoader
         }
 
         // Load an OS-dependent native library inside a jar file
-        rmathNativeLibraryPath = "/" + OSInfo.getNativeLibFolderPathForCurrentOS();
+        rmathNativeLibraryPath = "/native/" + OSInfo.getNativeLibFolderPathForCurrentOS();
         boolean hasNativeLib = hasResource(rmathNativeLibraryPath + "/" + rmathNativeLibraryName);
         if (!hasNativeLib) {
             if (OSInfo.getOSName().equals("Mac")) {

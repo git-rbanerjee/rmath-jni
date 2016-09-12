@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
+ * This code genertes JNIRMathNative.c from JNIRMathNative.h
  * 
  * @author Rabin Banerjee
  *

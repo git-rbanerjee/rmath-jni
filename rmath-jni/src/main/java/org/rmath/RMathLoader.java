@@ -233,7 +233,7 @@ public class RMathLoader
             throw new RMathError(RMathErrorCode.FAILED_TO_LOAD_NATIVE_LIBRARY, errorMessage);
         }
 
-        // Temporary folder for the native lib. Use the value of org.xerial.rmath.tempdir or java.io.tmpdir
+        // Temporary folder for the native lib. Use the value of org.rmath.tempdir or java.io.tmpdir
         File tempFolder = new File(System.getProperty(KEY_RMATH_TEMPDIR, System.getProperty("java.io.tmpdir")));
         if (!tempFolder.exists()) {
             boolean created = tempFolder.mkdirs();

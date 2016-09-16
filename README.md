@@ -13,8 +13,9 @@ This project provides a pure Java Wrapper over the Rmath statistical distributio
 
 ## Prebuilt Binaries :
 
-Windows: X86 , X86_64
-Linux: X86_64
+<b>Windows:</b> X86 , X86_64
+
+<b>Linux:</b> X86_64
 
 
 

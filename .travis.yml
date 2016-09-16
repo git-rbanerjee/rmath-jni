@@ -1,0 +1,9 @@
+language: java
+
+jdk:
+  - oraclejdk7
+  
+before_install:
+
+script: 
+  - cd rmath-jni && make && mvn clean package

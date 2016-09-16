@@ -129,7 +129,7 @@ public class OSInfo
     static String translateOSNameToFolderName(String osName)
     {
         if (osName.contains("Windows")) {
-            return "Windows";
+            return "win32";
         }
         else if (osName.contains("Mac")) {
             return "Mac";

@@ -7,7 +7,7 @@ CFLAGS_EXTRA = -Wall -O3
 ifeq ($(OS), Windows_NT)
 
     SHLIB_EXT = dll
-    PREFIX_OS = win32-
+    PREFIX_OS = win32
 
     ifeq ($(PROCESSOR_ARCHITECTURE), AMD64)
         PREFIX_ARCH = x86_64
@@ -39,19 +39,19 @@ else
 
     ifeq ($(UNAME_S), Linux)
         SHLIB_EXT = so
-        PREFIX_OS = linux-
+        PREFIX_OS = linux
         CFLAGS_EXTRA += -fPIC -std=c99
     endif
 
     ifeq ($(UNAME_S), FreeBSD)
         SHLIB_EXT = so
-        PREFIX_OS = freebsd-
+        PREFIX_OS = freebsd
         CFLAGS_EXTRA += -fPIC
     endif
 
     ifeq ($(UNAME_S), OpenBSD)
         SHLIB_EXT = so
-        PREFIX_OS = openbsd-
+        PREFIX_OS = openbsd
         CFLAGS_EXTRA += -fPIC
     endif
 
@@ -64,15 +64,17 @@ else
 
     ifeq ($(UNAME_S), SunOS)
         SHLIB_EXT = so
-        PREFIX_OS = sunos-
+        PREFIX_OS = sunos
         CFLAGS_EXTRA += -fPIC
     endif
 endif
 
-LIBPATH = $(PREFIX_OS)$(PREFIX_ARCH)
+LIBPATH = $(PREFIX_OS)-$(PREFIX_ARCH)
 LIBNAME = libRmath.$(SHLIB_EXT)
 STATIC_LIBNAME = libRmath.a
+FINALLIB = libjnirmath.so
 
 ifeq ($(OS), Windows_NT)
     LIBNAME = Rmath.dll
+	FINALLIB = jnirmath.dll
 endif

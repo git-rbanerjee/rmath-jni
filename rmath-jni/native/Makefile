@@ -4,7 +4,6 @@ include ./Make.inc
 
 DYNLIB = $(LIBPATH)/$(LIBNAME)
 STALIB = $(LIBPATH)/$(STATIC_LIBNAME)
-FINALLIB = libjnirmath.so
 
 
 
@@ -13,7 +12,7 @@ all:
 	mkdir -p $(LIBPATH)
 	cp Rmath/$(LIBNAME) $(DYNLIB)
 	cp Rmath/$(STATIC_LIBNAME) $(STALIB)
-	gcc -I$(JAVA_HOME)"/include/" -I$(JAVA_HOME)"/include/linux/"  -o $(FINALLIB) -shared JNIRMathNative.c  $(STALIB) -fPIC
+	gcc -I "$(JAVA_HOME)/include/" -I "$(JAVA_HOME)/include/$(PREFIX_OS)/"  -o $(FINALLIB) -shared JNIRMathNative.c  $(STALIB) -fPIC
 	rm -f $(LIBPATH)/*
 	mv $(FINALLIB) $(LIBPATH)
 
@@ -22,4 +21,3 @@ all:
 clean:
 	cd Rmath && make clean
 	cd $(LIBPATH) && rm *
-

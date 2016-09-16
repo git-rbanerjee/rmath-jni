@@ -9,6 +9,10 @@ A Java wrapper (pure JNI) of Rmath statistical distribution functions
 
 This project provides a pure Java Wrapper over the Rmath statistical distribution <b>without any 3rd Party library like JNA/BirdJ</b>
 
+## Prebuilt Binaries :
+
+Windows: X86 , X86_64
+Linux: X86_64
 
 
 

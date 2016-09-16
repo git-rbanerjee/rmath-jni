@@ -4,6 +4,8 @@
 
 A Java wrapper (pure JNI) of Rmath statistical distribution functions
 
+**Continuous Integration:** [![Build Status](https://api.travis-ci.org/git-rbanerjee/rmath-jni.svg?branch=master)](https://travis-ci.org/git-rbanerjee/rmath-jni) <br/>
+
 
 ## Getting Started
 
